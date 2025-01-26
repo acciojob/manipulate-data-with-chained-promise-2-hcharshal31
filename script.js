@@ -22,7 +22,7 @@ function promise2(data2){
 function promise3(data3){ 
     return new Promise(resolve =>{
         let multipliedArr = data3.map(item => {
-            item *= 2
+            return item *= 2
         });
         resolve(multipliedArr);
     });
