@@ -1,3 +1,5 @@
+let output = document.getElementById("output");
+
 let myArr = [1, 2, 3, 4];
 
 function promise1(data1){
@@ -11,7 +13,7 @@ function promise1(data1){
 function promise2(data2){
     return new Promise(resolve => {
 	let filteredArr = data2.filter(
-		item => item % 2 !== 0
+		item => item % 2 === 0
 	);
 	resolve(filteredArr);
 });
@@ -32,7 +34,7 @@ let arr = promise1(myArr)
 })
 .then((data) =>{
     return promise3(data);
+}).then(data=>{
+	output.textContent = data;
 });
-
-let output = document.getElementById("output");
-output.textContent = arr;
+// output.textContent = arr;
