@@ -28,7 +28,7 @@ function promise3(data3){
     });
 }
 
-let arr = promise1(myArr)
+promise1(myArr)
 .then((data) =>{
     return promise2(data);
 })
