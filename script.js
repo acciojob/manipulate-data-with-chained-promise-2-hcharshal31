@@ -33,8 +33,13 @@ promise1(myArr)
     return promise2(data);
 })
 .then((data) =>{
+	setTimeout(()=>{
+		output.textContent = data;
+	}, 1000);
     return promise3(data);
 }).then(data=>{
-	output.textContent = data;
+	setTimeout(()=>{
+		output.textContent = data;
+	}, 2000);
 });
 // output.textContent = arr;
