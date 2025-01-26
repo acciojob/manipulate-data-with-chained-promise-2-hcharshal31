@@ -21,23 +21,23 @@ function promise2(data2){
 
 function promise3(data3){ 
     return new Promise(resolve =>{
-        data3.forEach(item => {
+        let multipliedArr = data3.map(item => {
             item *= 2
         });
-        resolve(data3);
+        resolve(multipliedArr);
     });
 }
 
 promise1(myArr)
-.then((data) =>{
+.then(data => {
     return promise2(data);
 })
-.then((data) =>{
+.then(data => {
 	setTimeout(()=>{
 		output.textContent = data;
 	}, 1000);
     return promise3(data);
-}).then(data=>{
+}).then(data => {
 	setTimeout(()=>{
 		output.textContent = data;
 	}, 2000);
